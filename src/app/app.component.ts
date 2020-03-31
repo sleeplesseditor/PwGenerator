@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pw-generator';
+  includeLetters = false;
+  includeNumbers = false;
+  includeSymbols = false;
+  password = '';
+
+  onChangeUseLetters() {
+    this.includeLetters = !this.includeLetters;
+  }
+
+  onChangeUseNumbers() {
+    this.includeNumbers = !this.includeNumbers;
+  }
+
+  onChangeUseSymbols() {
+    this.includeSymbols = !this.includeSymbols;
+  }
+
+  onButtonClick() {
+    this.password = 'PASSWORD';
+  }
 }
